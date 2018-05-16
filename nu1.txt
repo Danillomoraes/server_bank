@@ -1,0 +1,1 @@
+"name":"Nubank","uri":"https://conta.nubank.com.br","client_id":"other.legacy","client_secret":"1iHY2WHAXj25GFSHTx9lyaTYnb4uB-v6"}

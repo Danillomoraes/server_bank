@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script/script.js"></script>
+    <script src="jquery/jquery-3.2.1.js"></script>
+  </head>
+  
+  <body onload="load()">
+    
+  <div class= "container">
+   <div class="row">
+    <div class="col">
+      
+    <h1 class="display-4 dash" style="text-align: center">      
+      Dashboard do Danillom
+    </h1>
+    </div> 
+   </div>    
+  </div>  
+    
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        
+        <h3>
+              Pair Last Change
+        </h3>
+      </div>
+     </div>
+      <div class="row">
+      <div class="col">
+        <table class="table table-hover table-sm" id="last_valor">
+  <thead class="thead-inverse">
+    <tr>
+      <th scope="col" onclick="order('last_valor', 'um')">#</th>
+      <th scope="col" onclick="order('last_valor', 'pair')">Pair</th>
+      <th scope="col" onclick="order('last_valor', 'last')">Last</th>
+      <th scope="col" onclick="order('last_valor', 'um_c')">1min</th>
+      <th scope="col" onclick="order('last_valor', 'hum_c')">High 1min</th>
+      <th scope="col" onclick="order('last_valor', 'lum_c')">Low 1min</th>
+      <th scope="col" onclick="order('last_valor', 'cinco_c')">5min</th>
+      <th scope="col" onclick="order('last_valor', 'hcinco_c')">High 5min</th>
+      <th scope="col" onclick="order('last_valor', 'lcinco_c')">Low 5min</th>
+      <th scope="col" onclick="order('last_valor', 'dez_c')">10min</th>
+      <th scope="col" onclick="order('last_valor', 'hdez_c')">High 10min</th>
+      <th scope="col" onclick="order('last_valor', 'ldez_c')">Low 10min</th>
+      <th scope="col" onclick="order('last_valor', 'trinta_c')">30min</th>
+      <th scope="col" onclick="order('last_valor', 'htrinta_c')">High 30min</th>
+      <th scope="col" onclick="order('last_valor', 'ltrinta_c')">Low 30min</th>
+      <th scope="col" onclick="order('last_valor', 'hora_c')">1h</th>
+      <th scope="col" onclick="order('last_valor', 'hhora_c')">High 1h</th>
+      <th scope="col" onclick="order('last_valor', 'lhora_c')">Low 1h</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+    <tr>
+    <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+    <tr>
+    <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+  </tbody>
+</table>
+      </div>
+    <!--  <div class="col-1">
+        
+      </div> -->
+    </div>
+        <div class="row">
+        <div class="col">
+          <h3>
+              Pair Last Change
+          </h3>          
+        <table class="table table-hover table-sm" id="pair_last_change">
+  <thead class="thead-inverse">
+    <tr>
+      <th scope="col" onclick="order('pair_last_change', 'um')">#</th>
+      <th scope="col" onclick="order('pair_last_change', 'pair')">Pair</th>
+      <th scope="col" onclick="order('pair_last_change', 'last')">Volume</th>
+      <th scope="col" onclick="order('pair_last_change', 'um')">1min</th>
+      <th scope="col" onclick="order('pair_last_change', 'lum')">High 1min</th>
+      <th scope="col" onclick="order('pair_last_change', 'hum')">Low 1min</th>
+      <th scope="col" onclick="order('pair_last_change', 'cinco')">5min</th>
+      <th scope="col" onclick="order('pair_last_change', 'hcinco')">High 5min</th>
+      <th scope="col" onclick="order('pair_last_change', 'lcinco')">Low 5min</th>
+      <th scope="col" onclick="order('pair_last_change', 'dez')">10min</th>
+      <th scope="col" onclick="order('pair_last_change', 'hdez')">High 10min</th>
+      <th scope="col" onclick="order('pair_last_change', 'ldez')">Low 10min</th>
+      <th scope="col" onclick="order('pair_last_change', 'trinta')">30min</th>
+      <th scope="col" onclick="order('pair_last_change', 'htrinta')">High 30min</th>
+      <th scope="col" onclick="order('pair_last_change', 'ltrinta')">Low 30min</th>
+      <th scope="col" onclick="order('pair_last_change', 'hora')">1h</th>
+      <th scope="col" onclick="order('pair_last_change', 'hhora')">High 1h</th>
+      <th scope="col" onclick="order('pair_last_change', 'lhora')">Low 1h</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+    <tr>
+    <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+    <tr>
+    <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>      
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </div>
+    </div>
+    <div class= "container">
+    <div class="row">
+      <div class="col-12">
+        <h2>
+          Return Ticker
+        </h2>
+        <table class="table table-hover table-sm" id="returnticker">
+  <thead class="thead-inverse">
+    <tr>
+      <th scope="col" onclick="order('returnticker', 'pair')">#</th>
+      <th scope="col" onclick="order('returnticker', 'pair')">Pair</th>
+      <th scope="col" onclick="order('returnticker', 'last')">Last</th>
+      <th scope="col" onclick="order('returnticker', 'chang')">chang</th>
+      <th scope="col" onclick="order('returnticker', 'volume')">volume</th>
+      <th scope="col" onclick="order('returnticker', 'hora')">hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+      
+      </div>
+    </div>
+  </div>
+    
+    
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>  
+</html>
