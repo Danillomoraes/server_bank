@@ -1,7 +1,13 @@
 ﻿# Start Configuration
+import json
 
-POLONIEX_KEY = '2TX4V6RM-55E44XJJ-KLD0WO87-D4JBH9ZA'
-POLONIEX_SECRET = '3a6b0b1865a0b91c152f8afb0dfaa80d13d1199d4731f25c409e2afa6b62aa23ff7dcec674ca89c3fa8e8c16d068364ca4ba9c7bca64bb61ff0ea98c6f9f8f31'
+
+with open('keys.json') as json_data:
+    d = json.load(json_data)
+    print(d)
+
+POLONIEX_KEY = d['poloniex_key']
+POLONIEX_SECRET = d['poloniex_secret']
 
 BALANCE_REPORTING = False
 UPDATE_PERIOD_SECS = 60
@@ -115,7 +121,7 @@ while True:
             trades[trade['type']][trade['rate']] = 0.0
           trades[trade['type']][trade['rate']] += float(trade['total'])
         for type in trades:
-          content += type + "("         
+          content += type + "("
           for rate in trades[type]:
             content += str(trades[type][rate]) + "@" + rate.rstrip("0") + " "
           content = content.rstrip() # remove trailing space
@@ -147,7 +153,7 @@ while True:
       returnTicker = polo.public.returnTicker()
       print = ("returnTicker OK")
       time.sleep(1)
-      
+
       for pair, rate in returnTicker.items():
         if pairB == pair:
           #print(rate)
